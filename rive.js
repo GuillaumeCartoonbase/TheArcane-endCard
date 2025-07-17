@@ -56,6 +56,7 @@ function onLoadHandler() {
 	riveInstance.setNumberStateAtPath("face", 5, "Avatar");
 	riveInstance.setNumberStateAtPath("skin", 4, "Avatar");
 	riveInstance.setNumberStateAtPath("hair", 1, "Avatar");
+	riveInstance.setNumberStateAtPath("hairColor", 1, "Avatar");
 	riveInstance.setNumberStateAtPath("clothes", metier, "Avatar");
 	riveInstance.setTextRunValue("metier", metiers[metier - 1].toUpperCase());
 
