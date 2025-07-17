@@ -1,5 +1,13 @@
 const metier = 1;
 
+const getWork = 1;
+const getHobby = 1;
+const getEmotion = 1;
+const getLesson = 1;
+const getHero = 1;
+const getBG = 1;
+const getCard = 1;
+
 const metiers = [
 	"aérospatial",
 	"robotique",
@@ -45,13 +53,13 @@ function onLoadHandler() {
 	BG = inputs.find((i) => i.name === "BG");
 	card = inputs.find((i) => i.name === "card");
 
-	work.value = 1;
-	hobby.value = 1;
-	emotion.value = 3;
-	lesson.value = 3;
-	hero.value = 3;
-	BG.value = 4;
-	card.value = 2;
+	work.value = getWork;
+	hobby.value = getHobby;
+	emotion.value = getEmotion;
+	lesson.value = getLesson;
+	hero.value = getHero;
+	BG.value = getBG;
+	card.value = getCard;
 
 	riveInstance.setNumberStateAtPath("face", 5, "Avatar");
 	riveInstance.setNumberStateAtPath("skin", 4, "Avatar");
