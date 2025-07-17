@@ -1,3 +1,23 @@
+const metier = 1;
+
+const metiers = [
+	"aérospatial",
+	"robotique",
+	"Informatique et Numérique",
+	"beauté",
+	"mode",
+	"Transports et Logistique",
+	"environnement et énergie",
+	"Agriculture, Agroalimentaire",
+	"Data, Cyber\net Télécommunications",
+	"gaming",
+	"maritime",
+	"cinéma/audiovisuel",
+	"Urbanisme, Infrastructures,\nArchitecture et Design",
+	"automobile",
+	"santé",
+];
+
 const stateMachine = "State Machine 1";
 
 const riveInstance = new rive.Rive({
@@ -25,25 +45,6 @@ function onLoadHandler() {
 	BG = inputs.find((i) => i.name === "BG");
 	card = inputs.find((i) => i.name === "card");
 
-	metiers = [
-		"aérospatial",
-		"robotique",
-		"Informatique et Numérique",
-		"beauté",
-		"mode",
-		"Transports et Logistique",
-		"environnement et énergie",
-		"Agriculture, Agroalimentaire",
-		"Data, Cyber\net Télécommunications",
-		"gaming",
-		"maritime",
-		"cinéma/audiovisuel",
-		"Urbanisme, Infrastructures,\nArchitecture et Design",
-		"automobile",
-		"santé",
-	];
-
-	metier = 1;
 	work.value = 1;
 	hobby.value = 1;
 	emotion.value = 3;
