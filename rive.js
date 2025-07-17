@@ -11,6 +11,7 @@ const getLesson = 1;
 const getHero = 1;
 const getBG = 1;
 const getCard = 1;
+const adv = [5, 3, 2];
 
 const metiers = [
 	"aérospatial",
@@ -72,9 +73,9 @@ function onLoadHandler() {
 	riveInstance.setNumberStateAtPath("clothes", metier, "Avatar");
 	riveInstance.setTextRunValue("metier", metiers[metier - 1].toUpperCase());
 
-	riveInstance.setNumberStateAtPath("adv", 3, "adventure A");
-	riveInstance.setNumberStateAtPath("adv", 4, "adventure B");
-	riveInstance.setNumberStateAtPath("adv", 2, "adventure C");
+	riveInstance.setNumberStateAtPath("adv", adv[0], "adventure A");
+	riveInstance.setNumberStateAtPath("adv", adv[1], "adventure B");
+	riveInstance.setNumberStateAtPath("adv", adv[2], "adventure C");
 }
 
 // Resize the drawing surface if the window resizes
