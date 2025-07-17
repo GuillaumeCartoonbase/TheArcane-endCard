@@ -1,3 +1,7 @@
+const charFace = 1;
+const charHair = 1;
+const charHairColor = 1;
+const charSkin = 1;
 const metier = 1;
 
 const getWork = 1;
@@ -61,10 +65,10 @@ function onLoadHandler() {
 	BG.value = getBG;
 	card.value = getCard;
 
-	riveInstance.setNumberStateAtPath("face", 5, "Avatar");
-	riveInstance.setNumberStateAtPath("skin", 4, "Avatar");
-	riveInstance.setNumberStateAtPath("hair", 1, "Avatar");
-	riveInstance.setNumberStateAtPath("hairColor", 1, "Avatar");
+	riveInstance.setNumberStateAtPath("face", charFace, "Avatar");
+	riveInstance.setNumberStateAtPath("skin", charSkin, "Avatar");
+	riveInstance.setNumberStateAtPath("hair", charHair, "Avatar");
+	riveInstance.setNumberStateAtPath("hairColor", charHairColor, "Avatar");
 	riveInstance.setNumberStateAtPath("clothes", metier, "Avatar");
 	riveInstance.setTextRunValue("metier", metiers[metier - 1].toUpperCase());
 
