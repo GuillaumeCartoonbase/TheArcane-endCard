@@ -2,7 +2,6 @@ const charFace = 2;
 const charHair = 1;
 const charHairColor = 1;
 const charSkin = 1;
-const metier = 3;
 
 const getWheel = 3;
 const getHobby = 2;
@@ -13,22 +12,22 @@ const getBG = 2;
 const getCard = 5;
 const bag = [1, 2, 3];
 
+const metier = 10;
 const metiers = [
-	"aérospatial",
 	"robotique",
-	"Informatique et Numérique",
-	"beauté",
-	"mode",
-	"Transports et Logistique",
-	"environnement et énergie",
-	"Agriculture, Agroalimentaire",
-	"Data, Cyber\net Télécommunications",
+	"Informatique\net Numérique",
+	"beauté et mode",
+	"Transports\net Logistique",
+	"environnement",
+	"énergie",
+	"Agriculture,\nAgroalimentaire",
+	"Data et IA",
 	"gaming",
-	"maritime",
-	"cinéma/audiovisuel",
+	"cinéma\net audiovisuel",
 	"Urbanisme, Infrastructures,\nArchitecture et Design",
-	"automobile",
 	"santé",
+	"Cybersécurité",
+	"aérospatial",
 ];
 
 const stateMachine = "State Machine 1";
