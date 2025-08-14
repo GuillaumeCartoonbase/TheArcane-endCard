@@ -1,17 +1,17 @@
-const charFace = 1;
+const charFace = 2;
 const charHair = 1;
 const charHairColor = 1;
 const charSkin = 1;
-const metier = 1;
+const metier = 3;
 
-const getWork = 1;
-const getHobby = 1;
+const getWheel = 3;
+const getHobby = 2;
 const getEmotion = 1;
 const getLesson = 1;
-const getHero = 1;
-const getBG = 1;
-const getCard = 1;
-const adv = [5, 3, 2];
+const getHero = 4;
+const getBG = 2;
+const getCard = 5;
+const bag = [1, 2, 3];
 
 const metiers = [
 	"aérospatial",
@@ -50,32 +50,33 @@ function onLoadHandler() {
 
 	const inputs = riveInstance.stateMachineInputs(stateMachine);
 
-	work = inputs.find((i) => i.name === "work");
-	hobby = inputs.find((i) => i.name === "hobby");
-	emotion = inputs.find((i) => i.name === "emotion");
-	lesson = inputs.find((i) => i.name === "lesson");
-	hero = inputs.find((i) => i.name === "hero");
+	// Setup inputs
 	BG = inputs.find((i) => i.name === "BG");
 	card = inputs.find((i) => i.name === "card");
 
-	work.value = getWork;
-	hobby.value = getHobby;
-	emotion.value = getEmotion;
-	lesson.value = getLesson;
-	hero.value = getHero;
+	// Use inputs
 	BG.value = getBG;
 	card.value = getCard;
+	riveInstance.setNumberStateAtPath("heroineInput", getHero, "heroine");
+	riveInstance.setNumberStateAtPath(
+		"emotionInput",
+		getEmotion,
+		"Avatar/outfit front/ecusson"
+	);
+	riveInstance.setNumberStateAtPath("bagInput", bag[0], "bag 1");
+	riveInstance.setNumberStateAtPath("bagInput", bag[1], "bag 2");
+	riveInstance.setNumberStateAtPath("bagInput", bag[2], "bag 3");
+	riveInstance.setNumberStateAtPath("roomInput", getHobby, "room");
+	riveInstance.setNumberStateAtPath("lessonInput", getLesson, "lesson");
+	riveInstance.setNumberStateAtPath("wheelInput", getWheel, "wheel");
 
+	//Face inputs
 	riveInstance.setNumberStateAtPath("face", charFace, "Avatar");
 	riveInstance.setNumberStateAtPath("skin", charSkin, "Avatar");
 	riveInstance.setNumberStateAtPath("hair", charHair, "Avatar");
 	riveInstance.setNumberStateAtPath("hairColor", charHairColor, "Avatar");
 	riveInstance.setNumberStateAtPath("clothes", metier, "Avatar");
 	riveInstance.setTextRunValue("metier", metiers[metier - 1].toUpperCase());
-
-	riveInstance.setNumberStateAtPath("adv", adv[0], "adventure A");
-	riveInstance.setNumberStateAtPath("adv", adv[1], "adventure B");
-	riveInstance.setNumberStateAtPath("adv", adv[2], "adventure C");
 }
 
 // Resize the drawing surface if the window resizes
